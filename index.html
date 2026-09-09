@@ -20,47 +20,67 @@
     --line-light: rgba(255,255,255,0.18);
   }
   *{box-sizing:border-box;}
-  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Space Grotesk',sans-serif;}
+  body{margin:0;background:var(--navy);color:var(--cream);font-family:'Space Grotesk',sans-serif;}
   h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;margin:0;line-height:1.05;text-transform:uppercase;letter-spacing:-0.01em;}
   .mono{font-family:'JetBrains Mono',monospace;}
   a{color:inherit;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
   .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 26px;border-radius:100px;border:2px solid var(--navy);background:var(--yellow);color:var(--ink);cursor:pointer;text-decoration:none;}
-  .btn:hover{background:var(--navy);color:var(--yellow);}
-  .btn.ghost{background:transparent;border-color:var(--line-light);color:var(--cream);}
-  .btn.ghost:hover{background:var(--line-light);}
+  .btn:hover{background:var(--cream);color:var(--navy);}
 
-  /* header */
-  header{background:var(--navy);color:var(--cream);}
-  .headbar{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px 24px;text-align:center;}
-  .headbar img{margin:0 auto;}
-  .word{font-family:'Archivo Black',sans-serif;font-size:20px;letter-spacing:0.02em;}
-  .pill{font-size:12px;font-family:'JetBrains Mono',monospace;border:1px solid var(--line-light);padding:5px 12px;border-radius:100px;color:var(--yellow);}
+  /* Banner Card Style */
+  .campaign-banner {
+    max-width: 760px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+  }
+  .campaign-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
 
-  /* hero */
-  .hero{background:var(--navy);color:var(--cream);}
-  .hero-grid{display:grid;grid-template-columns:1fr;gap:0;padding:44px 0 60px;align-items:center;text-align:center;}
-  .hero h1{font-size:52px;color:var(--cream);}
-  .hero h1 span{color:var(--yellow);}
-  .hero p{font-size:17px;color:rgba(255,248,234,0.75);max-width:560px;margin:20px auto 0;}
-  .hero-cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
-  .hero-note{font-size:13px;color:rgba(255,248,234,0.55);font-family:'JetBrains Mono',monospace;}
+  /* Hero Section Copy */
+  .hero {
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 32px 0 60px;
+    text-align: center;
+  }
+  .hero-grid {
+    display: flex;
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .hero h1 span {
+    color: var(--yellow);
+  }
+  .hero p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 18px auto 0;
+  }
 
-  /* phone mock */
-  .phone-frame{background:var(--asphalt);border-radius:28px;padding:10px;width:230px;margin:0 auto;border:1px solid var(--line-light);}
-  .phone-screen{background:linear-gradient(180deg,#345580,#152341);border-radius:20px;aspect-ratio:9/16;position:relative;overflow:hidden;padding:14px;display:flex;flex-direction:column;justify-content:space-between;}
-  .reel-handle{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--cream);}
-  .reel-avatar{width:22px;height:22px;border-radius:50%;background:var(--yellow);}
-  .reel-caption{font-size:12.5px;color:var(--cream);line-height:1.4;background:rgba(0,0,0,0.35);padding:8px 10px;border-radius:8px;}
-  .reel-stats{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--yellow);}
-  .ticket{margin-top:22px;background:var(--cream);color:var(--ink);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:relative;border:1px dashed var(--ink);}
-  .ticket:before,.ticket:after{content:"";position:absolute;top:50%;width:16px;height:16px;background:var(--ink);border-radius:50%;transform:translateY(-50%);}
-  .ticket:before{left:-8px;}
-  .ticket:after{right:-8px;}
-  .ticket .code{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;letter-spacing:0.05em;}
-  .ticket .sub{font-size:11px;color:rgba(21,18,12,0.6);}
+  /* City Reel Section */
+  .city-section{background:var(--cream);color:var(--ink);padding:64px 0;border-bottom:1px solid var(--line);}
+  .city-head{max-width:560px;margin:0 auto 28px;text-align:center;}
+  .city-head h2{font-size:26px;}
+  .city-download{display:flex;gap:32px;align-items:center;justify-content:center;background:#fff;border:1.5px solid var(--navy);border-radius:20px;padding:28px;max-width:760px;margin:0 auto;}
+  .city-download-info p{font-size:14px;color:rgba(21,18,12,0.65);margin:0 0 18px;max-width:420px;line-height:1.5;}
 
-  /* steps */
+  .sample-frame{width:200px;flex-shrink:0;}
+  .sample-video{width:100%;aspect-ratio:9/16;border-radius:16px;display:block;background:#000;object-fit:cover;}
+
+  /* Steps Section */
   .steps-section{background:var(--asphalt);color:var(--cream);padding:64px 0;}
   .steps-head{max-width:520px;margin-bottom:36px;}
   .steps-head h2{font-size:28px;color:var(--cream);}
@@ -71,15 +91,8 @@
   .step h3{font-size:16px;text-transform:none;font-family:'Space Grotesk',sans-serif;font-weight:700;margin:10px 0 8px;}
   .step p{font-size:13.5px;color:rgba(255,248,234,0.65);margin:0;line-height:1.5;}
 
-  /* rules */
-  .rules-section{background:var(--navy);color:var(--cream);padding:56px 0;}
-  .rules-section h2{font-size:22px;color:var(--cream);margin-bottom:20px;}
-  .rules-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:640px;}
-  .rules-list li{font-size:14.5px;color:rgba(255,248,234,0.75);padding-left:22px;position:relative;line-height:1.5;}
-  .rules-list li:before{content:"—";position:absolute;left:0;color:var(--yellow);}
-
-  /* form */
-  .apply-section{padding:72px 0;background:var(--cream);}
+  /* Form Section */
+  .apply-section{padding:72px 0;background:var(--cream);color:var(--ink);}
   .apply-card{background:#fff;border:1.5px solid var(--navy);border-radius:20px;padding:36px;max-width:640px;margin:0 auto;}
   .apply-card h2{font-size:26px;margin-bottom:6px;}
   .apply-card>p{font-size:14px;color:rgba(21,18,12,0.6);margin:0 0 26px;}
@@ -87,283 +100,238 @@
   .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;}
   .field input{width:100%;padding:12px 14px;border-radius:9px;border:1.5px solid var(--line);font-family:'Space Grotesk',sans-serif;font-size:14.5px;background:var(--cream);}
   .field input:focus{outline:none;border-color:var(--navy);}
-  .field select{width:100%;padding:12px 14px;border-radius:9px;border:1.5px solid var(--line);font-family:'Space Grotesk',sans-serif;font-size:14.5px;background:var(--cream);}
-  .field select:focus{outline:none;border-color:var(--navy);}
   .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   .check-row{display:flex;align-items:flex-start;gap:10px;margin:20px 0 24px;}
   .check-row input{margin-top:3px;}
   .check-row label{font-size:13.5px;color:rgba(21,18,12,0.75);}
   .error-msg{font-size:12.5px;color:var(--signal);margin-top:10px;display:none;}
   .submit-btn{width:100%;justify-content:center;padding:15px;font-size:15px;}
-  .terms-cta{text-align:center;font-size:12.5px;color:rgba(21,18,12,0.55);margin:14px 0 0;}
-  .terms-cta a{color:var(--navy);text-decoration:underline;font-weight:700;}
   .success-view{display:none;text-align:center;}
   .success-view .ref{font-family:'JetBrains Mono',monospace;font-size:20px;background:var(--yellow);display:inline-block;padding:8px 18px;border-radius:8px;margin:12px 0 16px;}
   .success-view p{font-size:14px;color:rgba(21,18,12,0.65);max-width:440px;margin:0 auto;}
 
-  .my-subs{max-width:640px;margin:28px auto 0;}
-  .my-subs-item{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border:1px solid var(--line);border-radius:10px;font-size:13px;margin-bottom:8px;background:#fff;}
-  .status-chip{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:100px;background:rgba(30,138,87,0.1);color:var(--go);}
-
   footer{background:var(--navy);color:rgba(255,248,234,0.5);padding:28px 24px;font-size:12.5px;text-align:center;}
-  footer .note{max-width:600px;margin:0 auto 10px;line-height:1.6;}
-
-  /* terms */
-  .terms-section{padding:64px 0;background:var(--cream);}
-  .terms-card{background:#fff;border:1.5px solid var(--navy);border-radius:20px;padding:36px;max-width:760px;margin:0 auto;}
-  .terms-card h2{font-size:24px;margin-bottom:10px;}
-  .terms-intro{font-size:14px;color:rgba(21,18,12,0.65);margin:0 0 18px;}
-  .terms-list{margin:0;padding-left:22px;display:grid;gap:12px;}
-  .terms-list li{font-size:13.5px;line-height:1.6;color:rgba(21,18,12,0.8);padding-left:4px;}
-
-  /* best practices */
-  .practices-section{background:var(--asphalt);color:var(--cream);padding:64px 0;}
-  .practices-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  .practice-item{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,248,234,0.8);line-height:1.5;border:1px solid var(--line-light);border-radius:12px;padding:16px 18px;background:rgba(255,255,255,0.03);}
-  .practice-item .tick{color:var(--yellow);font-weight:700;flex-shrink:0;}
-
-  /* logo download */
-  .logo-section{padding:56px 0;}
-  .logo-card{background:var(--navy);border-radius:20px;padding:32px;display:flex;align-items:center;gap:28px;}
-  .logo-preview{height:64px;width:auto;border-radius:12px;flex-shrink:0;}
-  .logo-title{font-size:18px;color:var(--cream);text-transform:none;font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:6px;}
-  .logo-copy{font-size:13.5px;color:rgba(255,248,234,0.65);margin:0 0 16px;}
-
-  /* examples */
-  .examples-section{padding:64px 0;background:var(--cream);}
-  .examples-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  .example-card{border:1.5px solid var(--navy);border-radius:14px;padding:22px 20px;background:#fff;}
-  .example-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--navy);margin-bottom:10px;}
-  .example-card h3{font-size:16px;text-transform:none;font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:8px;}
-  .example-card p{font-size:13.5px;color:rgba(21,18,12,0.65);margin:0;line-height:1.5;}
-
-  .sample-video-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:36px;}
-  .sample-frame{width:230px;}
-  .sample-video{width:100%;aspect-ratio:9/16;border-radius:20px;display:block;background:#000;object-fit:cover;}
-  .sample-caption{font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(21,18,12,0.5);}
-
-  /* campaign banner */
-  .campaign-banner{max-width:860px;margin:0 auto;padding:40px 24px 0;}
-  .campaign-banner img{width:100%;height:auto;display:block;border-radius:20px;box-shadow:0 18px 40px rgba(0,0,0,0.35);}
-  
-  /* city reels - updated for deep link view */
-  .city-section{background:var(--cream);padding:64px 0;border-bottom:1px solid var(--line);}
-  .city-head{max-width:560px;margin-bottom:28px;}
-  .city-head h2{font-size:26px;}
-  .city-head p{color:rgba(21,18,12,0.65);margin-top:10px;font-size:15px;}
-  .city-download{display:flex;gap:32px;align-items:center;background:#fff;border:1.5px solid var(--navy);border-radius:20px;padding:28px;}
-  .city-download-info h3{font-size:18px;text-transform:none;font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:8px;}
-  .city-download-info p{font-size:14px;color:rgba(21,18,12,0.65);margin:0 0 18px;max-width:420px;line-height:1.5;}
-  .city-video-note{font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(21,18,12,0.5);margin-top:10px;}
+  footer .note{max-width:600px;margin:0 auto;line-height:1.6;}
 
   @media(max-width:760px){
     .wrap{padding:0 16px;}
-    .headbar{padding:14px 16px;}
-    .campaign-banner{padding:20px 14px 0;}
+    .campaign-banner{padding:20px 16px 0;}
     .campaign-banner img{border-radius:14px;}
-    .hero-grid{padding:32px 0 44px;}
     .hero h1{font-size:32px;}
-    .hero p{font-size:15.5px;}
+    .hero p{font-size:14.5px;}
     .city-section{padding:44px 0;}
     .city-head h2{font-size:22px;}
-    .city-download{flex-direction:column;padding:20px 16px;gap:20px;}
-    .city-download-info{text-align:center;}
+    .city-download{flex-direction:column;padding:20px 16px;gap:20px;text-align:center;}
     .city-download-info p{max-width:none;}
     .city-download-info .btn{width:100%;justify-content:center;}
-    .sample-frame{width:min(230px,70vw);}
+    .sample-frame{width:min(200px,70vw);}
     .steps-section{padding:44px 0;}
     .steps-head h2{font-size:22px;}
     .steps-row{grid-template-columns:1fr;}
     .field-row{grid-template-columns:1fr;}
     .apply-section{padding:44px 0;}
     .apply-card{padding:22px 16px;}
-    .btn{padding:13px 20px;font-size:14.5px;}
-    .practices-grid{grid-template-columns:1fr;}
-    .examples-grid{grid-template-columns:1fr;}
-    .logo-card{flex-direction:column;text-align:center;}
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="headbar wrap">
-    <img src="data:image/png;base64,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"[cite: 1]>
+<main>
+  <!-- Card Header Banner -->
+  <div class="campaign-banner">
+    <img src="Screenshot 2026-09-09 at 1.04.16 PM.jpg" alt="Rapido City Stars - Unleash Your Creativity & Win Rs. 1000!">
   </div>
-</header>
 
-<section class="city-section">
-  <div class="wrap">
-    <div class="city-head">
-      <h2>Download <span id="city-name-display">City</span> Video Reel</h2>[cite: 1]
-      <p>Use this reel to participate in the Rapido City Stars campaign. Upload it on your Instagram handle with your offer code!</p>[cite: 1]
-    </div>
-
-    <div class="city-download">
-      <div class="sample-frame">
-        <video id="city-video-preview" class="sample-video" controls poster="">
-          <source id="city-video-source" src="" type="video/mp4">
-          Your browser does not support video preview.[cite: 1]
-        </video>
-      </div>
-      <div class="city-download-info">
-        <h3 id="city-title">Ready for Upload</h3>[cite: 1]
-        <p>Download the official video reel customized for your city. Make sure to tag @RapidoApp when you post on Instagram.</p>[cite: 1]
-        <a id="city-download-btn" href="#" download class="btn">
-          <span>Download MP4 Reel</span>[cite: 1]
-        </a>
-        <div class="city-video-note">High Quality • 1080x1920 • MP4 Format</div>[cite: 1]
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>DOWNLOAD A REEL.<br><span>WIN RS. 1,000.</span></h1>
+        <p>
+          Rapido just landed in your city — and we want YOU to break the news.
+          Download the official FREERIDE reel for your city, post it on your public Instagram,
+          and once it crosses 1,000 views we credit ₹1,000 to your wallet.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- HOW IT WORKS SECTION RESTORED -->
-<section class="steps-section" id="how-it-works">
-  <div class="wrap">
-    <div class="steps-head">
-      <h2>How It Works</h2>
-      <p>Follow these simple steps to post your video reel and claim your rewards.</p>
-    </div>
-    <div class="steps-row">
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Download Reel</h3>
-        <p>Get the official high-quality video reel designed for your city directly from this page.</p>
+  <!-- Dynamic Reel Section -->
+  <section class="city-section">
+    <div class="wrap">
+      <div class="city-head">
+        <h2>Download the Reel below</h2>
       </div>
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Post on Instagram</h3>
-        <p>Upload the video as a Reel on your public Instagram handle. Tag @RapidoApp and include your offer code in the caption.</p>
-      </div>
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Submit & Earn</h3>
-        <p>Fill out the submission form below with your post link to register your entry and receive your payout.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUBMIT SECTION RESTORED -->
-<section class="apply-section" id="submit-section">
-  <div class="wrap">
-    <div class="apply-card">
-      <h2>Submit Your Entry</h2>
-      <p>Enter your details and post link below after uploading your reel.</p>
       
-      <form id="submission-form">
-        <div class="field-row">
-          <div class="field">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" placeholder="Enter your full name" required>
-          </div>
-          <div class="field">
-            <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" placeholder="10-digit mobile number" required>
-          </div>
+      <div class="city-download">
+        <div class="sample-frame">
+          <video id="cityVideo" class="sample-video" controls poster="">
+            <source id="cityVideoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
-
-        <div class="field">
-          <label for="instagram-handle">Instagram Handle</label>
-          <input type="text" id="instagram-handle" placeholder="@yourhandle" required>
+        <div class="city-download-info">
+          <p>Download this video and share iit on instagram and submit your link below</p>
+          <a id="downloadBtn" href="#" class="btn" download>Download Video</a>
         </div>
-
-        <div class="field">
-          <label for="reel-link">Instagram Reel Link</label>
-          <input type="url" id="reel-link" placeholder="https://www.instagram.com/reel/..." required>
-        </div>
-
-        <div class="check-row">
-          <input type="checkbox" id="terms-check" required>
-          <label for="terms-check">I confirm that I have posted the reel on my public Instagram profile and tagged @RapidoApp.</label>
-        </div>
-
-        <button type="submit" class="btn submit-btn">Submit Post Link</button>
-        <div class="error-msg" id="form-error">Please fill in all fields correctly.</div>
-      </form>
-
-      <div class="success-view" id="success-message">
-        <h3>Submission Received!</h3>
-        <div class="ref" id="ref-code">REF123456</div>
-        <p>Thank you for participating! Our team will verify your post and notify you shortly.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- How it Works -->
+  <section class="steps-section">
+    <div class="wrap">
+      <div class="steps-head">
+        <h2>How It Works</h2>
+        <p>Follow these simple steps to claim your reward.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>Download the Reel</h3>
+          <p>Get the video template loaded for your city from the section above.</p>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <h3>Post on Instagram</h3>
+          <p>Upload the reel on your Instagram profile and tag the required handles/hashtags.</p>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <h3>Submit Details</h3>
+          <p>Fill out the application form below with your reel link and details to receive ₹1000.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submission Form -->
+  <section class="apply-section">
+    <div class="wrap">
+      <div class="apply-card">
+        <h2>Submit Your Entry</h2>
+        <p>Fill in the required information after posting your reel on Instagram.</p>
+        
+        <form id="entryForm">
+          <div class="field">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" required placeholder="Enter your full name">
+          </div>
+          
+          <div class="field-row">
+            <div class="field">
+              <label for="phoneNumber">Phone Number *</label>
+              <input type="tel" id="phoneNumber" required placeholder="10-digit mobile number">
+            </div>
+            <div class="field">
+              <label for="instaHandle">Instagram Handle *</label>
+              <input type="text" id="instaHandle" required placeholder="@yourhandle">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="reelLink">Reel Link *</label>
+            <input type="url" id="reelLink" required placeholder="https://www.instagram.com/reel/...">
+          </div>
+
+          <div class="check-row">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the Terms &amp; Conditions and confirm that the submitted content meets all campaign guidelines.</label>
+          </div>
+
+          <div id="errorMsg" class="error-msg">Please fill in all required fields properly.</div>
+
+          <button type="submit" class="btn submit-btn">Submit Entry</button>
+        </form>
+
+        <div id="successView" class="success-view">
+          <h3>Submission Successful!</h3>
+          <p>Your entry has been recorded. Your reference code is:</p>
+          <div id="refCode" class="ref">RCS-000000</div>
+          <p>Keep this code safe for tracking your reward status.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <div class="note">Rapido City Stars Campaign — Terms & Conditions apply.</div>[cite: 1]
+  <div class="wrap">
+    <p class="note">Rapido City Stars Campaign. All rights reserved.</p>
+  </div>
 </footer>
 
 <script>
-  // Mapping of cities to their video URLs
-  const cityVideoMap = {
-    'jalore': {
-      name: 'Jalore',
-      videoUrl: 'videos/jalore.mp4'
-    },
-    'jaipur': {
-      name: 'Jaipur',
-      videoUrl: 'videos/jaipur.mp4'
-    },
-    'jodhpur': {
-      name: 'Jodhpur',
-      videoUrl: 'videos/jodhpur.mp4'
-    },
-    'kota': {
-      name: 'Kota',
-      videoUrl: 'videos/kota.mp4'
-    },
-    'default': {
-      name: 'Your City',
-      videoUrl: 'videos/default.mp4'
-    }
+  // City Video File Path Configuration
+  const cityReels = {
+    'bangalore': 'reels/bangalore.mp4',
+    'hyderabad': 'reels/hyderabad.mp4',
+    'delhi': 'reels/delhi.mp4',
+    'mumbai': 'reels/mumbai.mp4',
+    'chennai': 'reels/chennai.mp4',
+    'default': 'reels/default.mp4'
   };
 
-  // Function to extract deep link/URL parameters
+  // URL Parameter Extraction (?city=cityname)
   function getCityFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);[cite: 1]
-    const city = urlParams.get('city');[cite: 1]
-    return city ? city.toLowerCase().trim() : 'default';[cite: 1]
+    const urlParams = new URLSearchParams(window.location.search);
+    const city = urlParams.get('city');
+    return city ? city.toLowerCase().trim() : 'default';
   }
 
-  // Load video dynamically based on the city param in the link
-  window.addEventListener('DOMContentLoaded', () => {
-    const currentCityKey = getCityFromURL();[cite: 1]
-    const cityData = cityVideoMap[currentCityKey] || {
-      name: currentCityKey.charAt(0).toUpperCase() + currentCityKey.slice(1),[cite: 1]
-      videoUrl: `videos/${currentCityKey}.mp4`[cite: 1]
-    };
-
-    // Update UI Elements
-    document.getElementById('city-name-display').innerText = cityData.name;[cite: 1]
-    document.getElementById('city-title').innerText = `${cityData.name} Official Reel`;[cite: 1]
+  // Dynamic Video & Download Setup
+  function setupCityReel() {
+    const city = getCityFromURL();
+    const videoSrc = cityReels[city] || cityReels['default'];
     
-    // Update Video and Download Link
-    const videoPreview = document.getElementById('city-video-preview');[cite: 1]
-    const videoSource = document.getElementById('city-video-source');[cite: 1]
-    const downloadBtn = document.getElementById('city-download-btn');[cite: 1]
+    const videoElement = document.getElementById('cityVideo');
+    const videoSource = document.getElementById('cityVideoSource');
+    const downloadBtn = document.getElementById('downloadBtn');
 
-    videoSource.src = cityData.videoUrl;[cite: 1]
-    videoPreview.load();[cite: 1]
+    if (videoSource && videoElement) {
+      videoSource.src = videoSrc;
+      videoElement.load();
+    }
 
-    downloadBtn.href = cityData.videoUrl;[cite: 1]
-    downloadBtn.setAttribute('download', `${cityData.name.toLowerCase()}_rapido_reel.mp4`);[cite: 1]
+    if (downloadBtn) {
+      downloadBtn.href = videoSrc;
+      downloadBtn.setAttribute('download', `${city}-rapido-reel.mp4`);
+    }
+  }
 
-    // Form submit handler
-    const form = document.getElementById('submission-form');
+  // Handle Form Submission
+  document.addEventListener('DOMContentLoaded', () => {
+    setupCityReel();
+
+    const form = document.getElementById('entryForm');
+    const successView = document.getElementById('successView');
+    const refCodeElement = document.getElementById('refCode');
+    const errorMsg = document.getElementById('errorMsg');
+
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const refCode = 'RCS' + Math.floor(100000 + Math.random() * 900000);
-        document.getElementById('ref-code').innerText = refCode;
+        errorMsg.style.display = 'none';
+
+        const fullName = document.getElementById('fullName').value.trim();
+        const phoneNumber = document.getElementById('phoneNumber').value.trim();
+        const instaHandle = document.getElementById('instaHandle').value.trim();
+        const reelLink = document.getElementById('reelLink').value.trim();
+        const terms = document.getElementById('terms').checked;
+
+        if (!fullName || !phoneNumber || !instaHandle || !reelLink || !terms) {
+          errorMsg.style.display = 'block';
+          return;
+        }
+
+        const randomRef = 'RCS-' + Math.floor(100000 + Math.random() * 900000);
+        refCodeElement.textContent = randomRef;
+
         form.style.display = 'none';
-        document.getElementById('success-message').style.display = 'block';
+        successView.style.display = 'block';
       });
     }
   });
 </script>
-
 </body>
 </html>
